@@ -1,5 +1,5 @@
 {% set name = "backports-datetime-fromisoformat" %}
-{% set version = "1.0.0" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9577a2a9486cd7383a5f58b23bb8e81cf0821dbbc0eb7c87d3fa198c1df40f5c
+  sha256: 1afaa4d593471a3b9a9875cc9b7edf2df8a4f317679ea658a8f8fa255539ce90
 
 build:
   number: 0
-  skip: True  # [py>=37]
+  skip: true  # [py>=37]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
