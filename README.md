@@ -7,13 +7,19 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/backports-datetime-fromisoformat-feedstock/blob/main/LICENSE.txt)
 
-Summary: Backport of Python 3.7's datetime.fromisoformat
+Summary: Backport of Python 3.11's datetime.fromisoformat
 
 Current build status
 ====================
 
 
-<table>
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11025&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/backports-datetime-fromisoformat-feedstock?branchName=main">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info
