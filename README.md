@@ -1,13 +1,17 @@
-About backports-datetime-fromisoformat
-======================================
+About backports-datetime-fromisoformat-feedstock
+================================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/backports-datetime-fromisoformat-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/movermeyer/backports.datetime_fromisoformat
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/backports-datetime-fromisoformat-feedstock/blob/main/LICENSE.txt)
-
 Summary: Backport of Python 3.11's datetime.fromisoformat
+
+Development: https://github.com/movermeyer/backports.datetime_fromisoformat
+
+Documentation: https://github.com/movermeyer/backports.datetime_fromisoformat/blob/main/README.rst
 
 Current build status
 ====================
@@ -144,4 +148,5 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@xylar](https://github.com/xylar/)
 
