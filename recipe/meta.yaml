@@ -29,6 +29,8 @@ test:
   commands:
     - pip check
   requires:
+    # to make sure we're actually testing the backport
+    - python <3.11
     - pip
 
 about:
