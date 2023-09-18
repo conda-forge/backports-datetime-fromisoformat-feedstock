@@ -12,20 +12,20 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python  >=3.7,<3.11
+    - python  >=3.7
     - pip
   run:
-    - python  >=3.7,<3.11
+    - python  >=3.7
 
 test:
   imports:
-    - backports
+    - backports.datetime_fromisoformat
   commands:
     - pip check
   requires:
@@ -35,8 +35,12 @@ about:
   home: https://github.com/movermeyer/backports.datetime_fromisoformat
   summary: Backport of Python 3.11's datetime.fromisoformat
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  dev_url: https://github.com/movermeyer/backports.datetime_fromisoformat
+  doc_url: https://github.com/movermeyer/backports.datetime_fromisoformat/blob/main/README.rst
 
 extra:
   recipe-maintainers:
     - ocefpaf
+    - xylar
