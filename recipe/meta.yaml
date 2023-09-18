@@ -18,6 +18,7 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
+    # host needs python <3.11 so the backport actually gets built
     - python  >=3.7,<3.11
     - pip
   run:
@@ -30,7 +31,7 @@ test:
     - pip check
   requires:
     # to make sure we're actually testing the backport
-    - python <3.11
+    - python >=3.7,<3.11
     - pip
 
 about:
