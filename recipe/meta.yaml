@@ -26,7 +26,7 @@ requirements:
 
 test:
   imports:
-    - datetime.fromisoformat # [py>311]
+    - datetime.fromisoformat  # [py>311]
     - backports.datetime_fromisoformat  # [py<=311]
   commands:
     - pip check
