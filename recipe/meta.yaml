@@ -10,21 +10,24 @@ source:
   sha256: 1b6afca7f47019c22df43062cde73c1af65fbdebc66520f352c690d52fd27127
 
 build:
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation  # [py<=311]
+  number: 1
 
 requirements:
   build:
-    - {{ compiler('c') }}
+    - {{ compiler('c') }}  # [py<=311]
+    - {{ stdlib("c") }}  # [py<=311]
   host:
+    # so python > 3.11 don't get removed 
     - python
-    - pip
+    - pip  # [py<=311]
+    - setuptools  # [py<=311]
   run:
     - python
 
 test:
   imports:
-    - backports.datetime_fromisoformat
+     - backports.datetime_fromisoformat  # [py<=311]
   commands:
     - pip check
   requires:
