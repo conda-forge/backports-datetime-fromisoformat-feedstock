@@ -18,7 +18,8 @@ requirements:
     - {{ compiler('c') }}  # [py<=311]
     - {{ stdlib("c") }}  # [py<=311]
   host:
-    - python  # [py<=311]
+    # so python > 3.11 don't get removed 
+    - python
     - pip  # [py<=311]
     - setuptools  # [py<=311]
   run:
