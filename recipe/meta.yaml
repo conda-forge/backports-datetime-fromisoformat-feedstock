@@ -1,17 +1,17 @@
 {% set name = "backports-datetime-fromisoformat" %}
-{% set version = "2.0.1" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/backports-datetime-fromisoformat-{{ version }}.tar.gz
-  sha256: 1b6afca7f47019c22df43062cde73c1af65fbdebc66520f352c690d52fd27127
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 142313bde1f93b0ea55f20f5a6ea034f84c79713daeb252dc47d40019db3812f
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation  # [py<=311]
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -27,7 +27,7 @@ requirements:
 
 test:
   imports:
-     - backports.datetime_fromisoformat  # [py<=311]
+    - backports.datetime_fromisoformat   # [py<=311]
   commands:
     - pip check
   requires:
